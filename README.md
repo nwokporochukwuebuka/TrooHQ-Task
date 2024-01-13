@@ -78,7 +78,6 @@ Further Instructions
 
 1. ERD Diagram
    ![erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/cb4bfbdc-a828-4ef9-bdff-b771fbcbe5e8)
-   ![Erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/blob/main/images/erd.png)
 
 2. API Documentation
 
