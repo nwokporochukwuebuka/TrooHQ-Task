@@ -77,13 +77,10 @@ Further Instructions
 ## Solution
 
 1. ERD Diagram
-<<<<<<< HEAD
-   ![Erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/blob/main/images/erd.png)
-=======
    ![erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/cb4bfbdc-a828-4ef9-bdff-b771fbcbe5e8)
->>>>>>> 28c9d76 (Uploading images)
+   ![Erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/blob/main/images/erd.png)
 
-3. API Documentation
+2. API Documentation
 
    #### User
 
@@ -133,25 +130,25 @@ Further Instructions
    **Response**
 
    This is the response of the API
-   ![Response of creating a new user using an already existing role](/images/response-new%20role.png)
+   <img width="688" alt="response-new role" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/15565bb7-4c6e-4f64-be85-3a1451050537">
 
    ### Login User of all Types
 
    #### SuperAdmin Login
 
    **Request**
-   ![Login Company](/images/login-company.png)
+   <img width="570" alt="login-company" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/60ce160c-bd43-4c51-a7a0-c60999222171">
 
    **Response**
-   ![Login Response](/images/login-company-response.png)
+   <img width="733" alt="login-company-response" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/8a71db0c-f760-4660-bd96-6b282108f238">
 
    #### Staff Login
 
    **Request**
-   ![Login Request Staff](/images/login-request-staff.png)
+   <img width="574" alt="login-request-staff" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/a4520ef5-f46d-4c03-b78d-04ec17845afe">
 
    **Response**
-   ![Login Response Staff](/images/login-staff-response.png)
+   <img width="753" alt="login-staff-response" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/aa2f375a-ab14-4c7a-bccb-9964d954491e">
 
 Other endpoints can be located in the `./request.rest` file and can be tested
 
