@@ -77,9 +77,9 @@ Further Instructions
 ## Solution
 
 1. ERD Diagram
-   ![ERD Diagram](/images/erd.png)
+   /Users/ma/Documents/TrooHQ/troohq-task/images/erd.png
 
-2. API Documentation
+3. API Documentation
 
    #### User
 
