@@ -12,7 +12,7 @@ If you would still prefer to do the installation manually, follow these steps:
 
 ```bash
 git clone --depth 1 https://github.com/nwokporochukwuebuka/TrooHQ-Task.git
-cd troohq-task
+
 npx rimraf ./.git
 ```
 
@@ -77,7 +77,11 @@ Further Instructions
 ## Solution
 
 1. ERD Diagram
+<<<<<<< HEAD
    ![Erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/blob/main/images/erd.png)
+=======
+   ![erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/cb4bfbdc-a828-4ef9-bdff-b771fbcbe5e8)
+>>>>>>> 28c9d76 (Uploading images)
 
 3. API Documentation
 
@@ -88,43 +92,43 @@ Further Instructions
    **Request**
    This endpoint registers both staff and company (super admin)
 
-   ![Request](/images/register_company.png)
+   <img width="486" alt="register_company" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/1b8c6424-51d4-4c04-88ee-ecd867d90206">
 
    **Response**
 
    This is the response of the API
 
-   ![Request](/images/register-success.png)
+   <img width="733" alt="register-success" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/fb7d1d66-1cc4-4e6f-b3be-9b262ed8f71f">
 
    ### Register Staff
 
    **Request**
    This endpoint registers both staff and company (super admin)
 
-   ![Request](/images/request-register-staff.png)
+   <img width="515" alt="request-register-staff" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/c6c2d760-0b15-4c8a-9b6d-5cbe4ffe0b4b">
 
    **Response**
 
    This is the response of the API
 
-   ![Request](/images/register-staff-success.png)
+   <img width="776" alt="register-staff-success" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/521431c1-916d-4641-a3e0-3a834b7de909">
 
    ### Superadmin Create User
 
    **Scenario One: Using an already existing role**
    **Request**
    This endpoint uses and already existing roleId when creating the user
-   ![Create User using existing role](/images/create-user-1.png)
+   <img width="584" alt="create-user-1" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/5083093c-97ef-4f04-856c-dbaafbddd8d3">
 
    **Response**
 
    This is the response of the API
-   ![Response of creating a new user using an already existing role](/images/response-already-createdd-role.png)
+   <img width="744" alt="response-already-createdd-role" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/b6f94d7b-acc2-4468-8fe1-76d218619cc1">
 
    **Scenario Two: Using a new role**
    **Request**
    This endpoint created a new role while creating the user as specified by the superadmin
-   ![Create User using existing role](/images/request-with-new-role.png)
+   <img width="568" alt="request-with-new-role" src="https://github.com/nwokporochukwuebuka/TrooHQ-Task/assets/55829039/f5b2b25f-02fd-4761-bd2e-cbb0012447e5">
 
    **Response**
 
