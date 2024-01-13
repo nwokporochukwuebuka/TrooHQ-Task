@@ -77,7 +77,7 @@ Further Instructions
 ## Solution
 
 1. ERD Diagram
-   /Users/ma/Documents/TrooHQ/troohq-task/images/erd.png
+   ![Erd](https://github.com/nwokporochukwuebuka/TrooHQ-Task/blob/main/images/erd.png)
 
 3. API Documentation
 
