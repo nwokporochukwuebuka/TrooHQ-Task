@@ -1,0 +1,141 @@
+### Authentication
+
+### Registering a company
+POST http://localhost:8000/v1/auth/register
+content-type: application/json
+
+{
+    "user": {
+        "userType": "company",
+        "name": "Chukwuebuka Nwokporo",
+        "email": "ebuka@tm30.net",
+        "password": "Einstein2@"
+    },
+    "company": {
+        "name": "Ebuka and Sons"
+    }
+}
+
+### Registering a staff
+POST http://localhost:8000/v1/auth/register
+content-type: application/json
+
+{
+    "user": {
+        "userType": "staff",
+        "name": "Chijioke Gideon",
+        "email": "gideon@tm30.net",
+        "password": "Einstein2@"
+    },
+    "company": {
+        "id": "65a0bdc3a32c390bd2e49156"
+    }
+}
+
+
+### Login company
+POST http://localhost:8000/v1/auth/login
+content-type: application/json
+
+{
+    "email": "ebuka@tm30.net",
+    "password": "Einstein2@"
+}
+
+### Login staff
+POST http://localhost:8000/v1/auth/login
+content-type: application/json
+
+{
+    "email": "gideon@tm30.net",
+    "password": "Einstein2@"
+}
+
+
+### Creating User
+
+### Using an already existing role
+POST http://localhost:8000/v1/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUwODE3NTIsImV4cCI6MTcwNTA4MzU1MiwidHlwZSI6ImFjY2VzcyJ9.Accj-WZP041ZCahs7nL2x0-HDhKeSB4Od7eSnvTUusY
+
+{
+    "email": "ezinne@tm30.net",
+    "password": "Tobiloba#2",
+    "roleId": "65a1003609fb582529209a7c",
+    "name": "Ezinne"
+}
+
+### Creating a new staff with no roleId but new Role Name
+POST http://localhost:8000/v1/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUwOTEwMDQsImV4cCI6MTcwNTA5MjgwNCwidHlwZSI6ImFjY2VzcyJ9.YMDIgT8eCsXz2OfERrLGIlKPkFdzhtsQPKAReyBoaAg
+
+{
+    "email": "mamab@tm30.net",
+    "password": "Tobiloba#2",
+    "roleName": "StaffAdmin",
+    "name": "Mama B"
+}
+
+
+### Update User
+
+### Updating users roles
+
+### Assigning roles to a user
+PATCH http://localhost:8000/v1/users/65a17cabdf9b97e929b65e5b
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUxMDIyMzksImV4cCI6MTcwNTEwNDAzOSwidHlwZSI6ImFjY2VzcyJ9.Wt9klsCa-SpKtDQ0NUBkehHBeJxBRXfJXkYSIJ7Amc0
+
+{
+    "roleId": "65a19fecfc70173b9f710979"
+}
+
+
+### Roles
+
+
+### Creating roles
+POST http://localhost:8000/v1/roles/65a0bdc3a32c390bd2e49156
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUwOTYzMzksImV4cCI6MTcwNTA5ODEzOSwidHlwZSI6ImFjY2VzcyJ9.EzNjnrwPRmgS6Sw2ZQrQrZih_68AQXNy0GmDWa_zm_E
+
+{
+    "name": "ManageRoles",
+    "description": "Manage all the permissions in the roles permission",
+    "permissions": ["65a1003609fb582529209a79"]
+}
+
+
+### Fetching all company roles
+GET http://localhost:8000/v1/roles/65a0bdc3a32c390bd2e49156
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUwOTYzMzksImV4cCI6MTcwNTA5ODEzOSwidHlwZSI6ImFjY2VzcyJ9.EzNjnrwPRmgS6Sw2ZQrQrZih_68AQXNy0GmDWa_zm_E
+
+
+### Adding permissions to a role
+POST http://localhost:8000/v1/roles/permissions/65a19fecfc70173b9f710979
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUwOTgyMjgsImV4cCI6MTcwNTEwMDAyOCwidHlwZSI6ImFjY2VzcyJ9.mjWaC8_14GHPPXl8ymXVIT_K-H-rYRDLF4hRwM7j6rw
+
+{
+    "permissionIds": ["65a1bc09923cd052c279506e", "65a1bc49923cd052c2795074"]
+}
+### Permissions
+
+
+### Creating permissions
+POST http://localhost:8000/v1/permissions
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWEwYmRjMmEzMmMzOTBiZDJlNDkxNTQiLCJpYXQiOjE3MDUwOTgyMjgsImV4cCI6MTcwNTEwMDAyOCwidHlwZSI6ImFjY2VzcyJ9.mjWaC8_14GHPPXl8ymXVIT_K-H-rYRDLF4hRwM7j6rw
+
+{
+    "name": "__test_permission_4__",
+    "description": "This is a tested permission 4"
+}
+
+### Fetching permissions per role
+GET http://localhost:8000/v1/permissions?roleId=65a19fecfc70173b9f710979
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWExMDAzNjA5ZmI1ODI1MjkyMDlhNzMiLCJpYXQiOjE3MDUxMDAzNDUsImV4cCI6MTcwNTEwMjE0NSwidHlwZSI6ImFjY2VzcyJ9.L5q4pRMSC6i2PQEUoFVzrmngCkn8f01ovQtM0ysJWdc
